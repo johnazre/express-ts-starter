@@ -1,15 +1,17 @@
-import express from 'express'
-import cors from 'cors'
-import bodyParser from 'body-parser'
-const port = 8000
+import "dotenv/config";
 
-const app = express()
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+const port = 8000;
 
-app.use(cors())
-app.use(bodyParser.json())
+const app = express();
 
-app.get('/', (req, res) => {
-  res.send('yoooo')
-})
+app.use(cors());
+app.use(bodyParser.json());
 
-app.listen(port, () => console.log(`listening on port: ${port}`))
+app.get("/", (req, res) => {
+  res.send("yoooo");
+});
+
+app.listen(port, () => console.log(`listening on port: ${port}`));
